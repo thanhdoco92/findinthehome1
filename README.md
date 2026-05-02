@@ -73,6 +73,13 @@ Since this app is built with Next.js, deploying it to Vercel is the optimal and 
 5. Click **Deploy** and wait a few minutes.
 6. 🎉 **Done!** Vercel will provide you with a `.vercel.app` URL to access your app from anywhere.
 
+#### 🔐 4. Create Initial Admin Account
+By default, new sign-ups are assigned the 'user' role. To access the Admin Panel:
+1. Open `supabase/03_setup_admin.sql`.
+2. **Crucial**: Change the email and password variables at the top of the file to your desired credentials.
+3. Copy the content and run it in the **Supabase SQL Editor**.
+4. Log in to your application with these credentials.
+
 ---
 
 <br/>
@@ -145,6 +152,13 @@ Vì ứng dụng được xây dựng bằng Next.js, việc đưa nó lên mạ
    - `SUPABASE_SERVICE_ROLE_KEY` (Bắt buộc để tính năng Admin Panel như thêm/xoá/đổi mật khẩu User hoạt động)
 5. Bấm **Deploy** và đợi vài phút.
 6. 🎉 **Hoàn tất!** Vercel sẽ cung cấp cho bạn một đường link `.vercel.app` để truy cập ứng dụng từ bất cứ đâu.
+
+#### 🔐 4. Tạo tài khoản Admin đầu tiên
+Mặc định, tài khoản đăng ký qua Web sẽ có quyền 'user'. Để truy cập Admin Panel:
+1. Mở file `supabase/03_setup_admin.sql`.
+2. **Quan trọng**: Thay đổi email và mật khẩu ở đầu file thành thông tin của bạn.
+3. Copy nội dung và chạy trong **Supabase SQL Editor**.
+4. Đăng nhập vào ứng dụng bằng tài khoản này.
 
 ---
 

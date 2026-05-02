@@ -112,37 +112,37 @@ LANGUAGE plpgsql
 SECURITY DEFINER
 AS $$
 DECLARE
-  v_house UUID := '00000000-0000-0000-0000-111111111111';
-  v_floor1 UUID := '00000000-0000-0000-0000-222222222222';
-  v_floor2 UUID := '00000000-0000-0000-0000-333333333333';
-  v_living UUID := '00000000-0000-0000-0000-444444444444';
-  v_kitchen UUID := '00000000-0000-0000-0000-555555555555';
-  v_bedroom UUID := '00000000-0000-0000-0000-666666666666';
+  v_house UUID := gen_random_uuid();
+  v_floor1 UUID := gen_random_uuid();
+  v_floor2 UUID := gen_random_uuid();
+  v_living UUID := gen_random_uuid();
+  v_kitchen UUID := gen_random_uuid();
+  v_bedroom UUID := gen_random_uuid();
   
   -- UUIDs for Living Room walls
-  v_lr_wn UUID := '00000000-0000-0000-1000-000000000001';
-  v_lr_ws UUID := '00000000-0000-0000-1000-000000000002';
-  v_lr_we UUID := '00000000-0000-0000-1000-000000000003';
-  v_lr_ww UUID := '00000000-0000-0000-1000-000000000004';
+  v_lr_wn UUID := gen_random_uuid();
+  v_lr_ws UUID := gen_random_uuid();
+  v_lr_we UUID := gen_random_uuid();
+  v_lr_ww UUID := gen_random_uuid();
 
   -- UUIDs for Kitchen walls
-  v_ki_wn UUID := '00000000-0000-0000-2000-000000000001';
-  v_ki_ws UUID := '00000000-0000-0000-2000-000000000002';
-  v_ki_we UUID := '00000000-0000-0000-2000-000000000003';
-  v_ki_ww UUID := '00000000-0000-0000-2000-000000000004';
+  v_ki_wn UUID := gen_random_uuid();
+  v_ki_ws UUID := gen_random_uuid();
+  v_ki_we UUID := gen_random_uuid();
+  v_ki_ww UUID := gen_random_uuid();
 
   -- UUIDs for Bedroom walls
-  v_bd_wn UUID := '00000000-0000-0000-3000-000000000001';
-  v_bd_ws UUID := '00000000-0000-0000-3000-000000000002';
-  v_bd_we UUID := '00000000-0000-0000-3000-000000000003';
-  v_bd_ww UUID := '00000000-0000-0000-3000-000000000004';
+  v_bd_wn UUID := gen_random_uuid();
+  v_bd_ws UUID := gen_random_uuid();
+  v_bd_we UUID := gen_random_uuid();
+  v_bd_ww UUID := gen_random_uuid();
 
-  v_tv_cabinet UUID := '00000000-0000-0000-0000-777777777777';
-  v_drawer UUID := '00000000-0000-0000-0000-888888888888';
-  v_wardrobe UUID := '00000000-0000-0000-0000-999999999999';
-  v_shelf1 UUID := '00000000-0000-0000-0000-aaaaaaaaaaaa';
-  v_shelf2 UUID := '00000000-0000-0000-0000-bbbbbbbbbbbb';
-  v_box_a UUID := '00000000-0000-0000-0000-cccccccccccc';
+  v_tv_cabinet UUID := gen_random_uuid();
+  v_drawer UUID := gen_random_uuid();
+  v_wardrobe UUID := gen_random_uuid();
+  v_shelf1 UUID := gen_random_uuid();
+  v_shelf2 UUID := gen_random_uuid();
+  v_box_a UUID := gen_random_uuid();
 BEGIN
   -- House
   INSERT INTO entities (id, user_id, name, type, parent_id, x, y, width, height, path) VALUES
