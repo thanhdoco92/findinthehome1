@@ -165,6 +165,12 @@ input, textarea, select { font-family: inherit; }
   display: inline-flex; align-items: center; justify-content: center;
 }
 .btn-icon:hover { color: var(--text-primary); }
+.btn-secondary {
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  border: 1px solid var(--border);
+}
+.btn-secondary:hover { background: var(--bg-hover); }
 .btn-loading {
   width: 18px; height: 18px; border: 2px solid rgba(255,255,255,0.3);
   border-top-color: white; border-radius: 50%;
@@ -307,6 +313,12 @@ input, textarea, select { font-family: inherit; }
   padding: 1px 6px; background: var(--bg-secondary);
   border-radius: 10px; flex-shrink: 0;
 }
+.tree-children {
+  padding-left: 12px;
+  border-left: 1px dashed var(--border);
+  margin-left: 12px;
+}
+
 
 /* === Property Panel === */
 .property-panel {
@@ -570,7 +582,14 @@ input, textarea, select { font-family: inherit; }
 }
 .breadcrumb-item:hover { color: var(--accent); text-decoration: underline; }
 .breadcrumb-separator { color: var(--text-muted); }
-/* === Mobile Utilities === */
+/* === Mobile Utilities & Helpers === */
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
 .mobile-only { display: none !important; }
 @media (max-width: 768px) {
   .mobile-only { display: flex !important; }
@@ -590,6 +609,8 @@ input, textarea, select { font-family: inherit; }
 .toolbar-floor-pills { gap: 4px !important; }
 .toolbar-floor-pill { border-radius: 20px !important; font-size: 11px !important; padding: 4px 10px !important; }
 .toolbar-floor-pill-active { background: var(--accent) !important; color: white !important; border-color: var(--accent) !important; }
+.floor-pill-label { font-weight: 500; }
+
 
 /* === Header Search === */
 .header-search { position: relative; flex: 1; max-width: 360px; margin: 0 16px; }
