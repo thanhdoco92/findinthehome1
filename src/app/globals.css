@@ -647,3 +647,92 @@ input, textarea, select { font-family: inherit; }
   .header-search { max-width: none; margin: 0 8px; }
   .header-search-input { font-size: 12px; padding: 6px 32px; }
 }
+
+/* === Search Location Card === */
+.search-location-card {
+  position: absolute;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-lg);
+  z-index: 100;
+  backdrop-filter: blur(24px);
+}
+
+@media (min-width: 769px) {
+  .search-location-card {
+    top: 80px;
+    right: 20px;
+    width: 340px;
+    border-radius: var(--radius);
+  }
+}
+
+@media (max-width: 768px) {
+  .search-location-card {
+    bottom: 80px;
+    left: 12px;
+    right: 12px;
+    border-radius: var(--radius-lg);
+    animation: slideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+}
+
+.location-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  border-bottom: 1px solid var(--border);
+}
+
+.location-card-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.location-card-body {
+  padding: 14px 16px;
+}
+
+.location-breadcrumb {
+  display: flex;
+  align-items: center;
+  overflow-x: auto;
+  gap: 2px;
+  padding-bottom: 4px;
+}
+
+.breadcrumb-btn {
+  background: none;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 20px;
+  color: var(--text-secondary);
+  font-size: 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  transition: all var(--transition);
+}
+
+.breadcrumb-btn:hover {
+  background: var(--bg-hover);
+  color: var(--text-primary);
+}
+
+.breadcrumb-btn.active {
+  background: var(--accent-glow);
+  color: var(--accent);
+  font-weight: 600;
+}
+
+@keyframes slideUp {
+  from { transform: translateY(40px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
