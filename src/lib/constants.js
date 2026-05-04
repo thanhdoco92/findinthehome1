@@ -71,3 +71,26 @@ export const METERS_TO_PIXELS = 50;
 export const MAX_TREE_DEPTH = 5;
 export const DEFAULT_TREE_DEPTH = 2;
 export const DEFAULT_SEARCH_LIMIT = 20;
+
+// Color palette cho container furniture styles (game-style)
+export const CONTAINER_PALETTE = {
+  bookshelf:  { fill: '#f5e6d3', stroke: '#c4956a', label: '📚 Kệ sách' },
+  shelf_unit: { fill: '#f5e6d3', stroke: '#c4956a', label: '📚 Kệ đơn' },
+  drawer:     { fill: '#e8e0d4', stroke: '#b5a898', label: '🗄️ Ngăn kéo' },
+  wardrobe:   { fill: '#f0e4d7', stroke: '#c7a882', label: '🚪 Tủ quần áo' },
+  cabinet:    { fill: '#e6dfd6', stroke: '#a89b8c', label: '🗄️ Tủ kệ' },
+  box:        { fill: '#fdf2e3', stroke: '#dbb978', label: '📦 Hộp/Thùng' },
+  chest:      { fill: '#fdf2e3', stroke: '#dbb978', label: '📦 Rương' },
+  basket:     { fill: '#f0ebe0', stroke: '#b8a88e', label: '🧺 Giỏ/Rổ' },
+  rack:       { fill: '#eee8df', stroke: '#a89b8c', label: '🪜 Giá treo' },
+  fridge:     { fill: '#e8eef4', stroke: '#9fb3c8', label: '🧊 Tủ lạnh' },
+  fridge_interior: { fill: '#e8eef4', stroke: '#9fb3c8', label: '🧊 Ngăn tủ lạnh' },
+  storage_bag: { fill: '#f0ebe0', stroke: '#b8a88e', label: '👜 Túi đựng' },
+  default:    { fill: '#fdf8e9', stroke: '#f2cc8f', label: '📦 Mặc định' },
+};
+
+// Icons available for container type (for PropertyPanel dropdown)
+export const CONTAINER_ICONS = [
+  'box', 'bookshelf', 'shelf_unit', 'drawer', 'wardrobe', 'cabinet',
+  'chest', 'basket', 'rack', 'fridge', 'fridge_interior', 'storage_bag'
+];

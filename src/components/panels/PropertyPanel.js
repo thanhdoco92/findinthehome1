@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { useTranslation } from '@/lib/i18n/useTranslation';
 import { useDialog } from '@/components/ui/DialogContext';
 import { Save, X, icons, Package } from 'lucide-react';
-import { TYPE_COLORS, ITEM_ICONS } from '@/lib/constants';
+import { TYPE_COLORS, ITEM_ICONS, CONTAINER_ICONS, CONTAINER_PALETTE } from '@/lib/constants';
 
 function getLucideComponent(iconName) {
   if (!iconName) return Package;
@@ -112,6 +112,17 @@ export default function PropertyPanel({ entity, onSave, onClose, onDelete }) {
                   ))}
                 </select>
               </div>
+            ) : entity.type === 'container' ? (
+              <select
+                value={form.icon}
+                onChange={(e) => setForm({ ...form, icon: e.target.value })}
+                style={{ width: '100%', padding: '6px 8px', borderRadius: 'var(--radius)', background: 'var(--bg-secondary)', border: '1px solid var(--border)', color: 'var(--text-primary)', outline: 'none', fontSize: '12px' }}
+              >
+                <option value="">📦 Mặc định</option>
+                {CONTAINER_ICONS.map(i => (
+                  <option key={i} value={i}>{CONTAINER_PALETTE[i]?.label || i}</option>
+                ))}
+              </select>
             ) : (
               <input
                 value={form.icon}
